@@ -3,24 +3,60 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --title-color: #3D5F8F;
+  --font-oswald: "Oswald", sans-serif;
+  --font-inter: "Inter", sans-serif;
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  font-family: var(--font-inter), sans-serif
+}
+
+.oswald {
+  font-family: var(--font-oswald), sans-serif;
+}
+
+.dialog-backdrop::backdrop {
+  background-color: #000000bf;
+}
+
+@media screen and (max-width: 1000px) {
+  .phone-list {
+    justify-content: center;
+  }
+
+  .phone-text {
+    text-align: center;
+  }
+
+  .phone-padding {
+    padding: 10px 10px 40px 10px;
+  }
+
+  .phone-col {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .phone-height {
+    height: unset;
+  }
+
+  .phone-image {
+    height: 100%;
+    transform: unset;
+  }
+
+  .phone-menu {
+    gap: 40px;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
