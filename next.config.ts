@@ -3,6 +3,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+
+  cacheComponents: true
 };
 
 export default withSentryConfig(nextConfig, {
@@ -42,3 +44,5 @@ export default withSentryConfig(nextConfig, {
     },
   }
 });
+
+module.exports = nextConfig;
